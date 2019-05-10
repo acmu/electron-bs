@@ -1,0 +1,20 @@
+.body-card {
+  margin: 15px;
+  min-height: 400px;
+}
+
+.drop-file {
+  width: 250px;
+  height: 150px;
+  border: 1px dashed rgb(20, 217, 252);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+pre {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f5f5f5;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>桌面应用</title>
+    <script src="./asset/vue.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+    <!-- 重置浏览器样式 -->
+    <link rel="stylesheet" href="./asset/reset.css" />
+    <!-- 自定义css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <el-card class="body-card">
+        <el-tabs v-model="tabsActiveName">
+          <el-tab-pane label="读取XML" name="first">
+            <div class="drop-file" @drop="onXmlDrop" @dragover="onDragover">
+              <div id="drop-body">
+                请拖动上传XML文件
+              </div>
+            </div>
+            <pre>{{xmlData}}</pre>
+          </el-tab-pane>
+          <el-tab-pane label="解析XML" name="second">解析XML</el-tab-pane>
+          <el-tab-pane label="生成表达式" name="third">角色管理</el-tab-pane>
+        </el-tabs>
+      </el-card>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js');
+    </script>
+    <!-- 自定义js -->
+    <script src="./VueComponent/show.js"></script>
+  </body>
+</html>
