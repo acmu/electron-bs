@@ -16,5 +16,8 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/register": "^7.4.4",
     "electron": "^5.0.1"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.19"
   }
 }
